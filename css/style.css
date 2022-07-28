@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --black: #000;
+  --blue: #000080;
+  --yellow: #fae92d;
+  --white: #ffffff;
+}
+h3 {
+  font-size: 4rem;
+  color: var(--white);
+}
+
+* {
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+*::selection {
+  background: var(--yellow);
+  color: var(--white);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+  transition: all 0.2s linear;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--blue);
+  z-index: 1000;
+  padding: 1rem 7%;
+  border-bottom: 0.2rem solid var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo img {
+  width: 200px;
+}
+
+header #menu-icon {
+  font-size: 35px;
+  color: var(--white);
+  cursor: pointer;
+  display: none;
+}
+
+header #navbar {
+  display: flex;
+}
+
+header #navbar a {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+header #navbar a:hover {
+  color: var(--yellow);
+}
+
+#home {
+  background: url(../images/bg-home-header.png) no-repeat center;
+  background-size: cover;
+  height: 90vh;
+  display: relative;
+}
+
+#home h3 {
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  text-align: center;
+  width: 60vw;
+  text-transform: none;
+}
+
+#sobre {
+  background-color: red;
+}
+
+#servicos {
+  background-color: green;
+}
+
+/************ Media Queries *************/
+@media (max-width: 900px) {
+  h3 {
+    font-size: 3rem;
+  }
+
+  header #menu-icon {
+    display: block;
+  }
+
+  header #navbar {
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: var(--blue);
+    position: absolute;
+    top: 80px;
+    flex-direction: column;
+    left: -100%;
+    align-items: center;
+    justify-content: center;
+    transition: all 200ms ease-out;
+  }
+
+  header #navbar a {
+    line-height: 6rem;
+    border-bottom: 0.1rem solid var(--white);
+    border-collapse: collapse;
+    width: 75%;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  header #navbar .home {
+    border-top: 0.1rem solid var(--white);
+  }
+
+  header #navbar.active {
+    left: 0;
+  }
+
+  #home {
+    height: 70vh;
+  }
+
+  #home h3 {
+    top: 35%;
+  }
+}
+
+@media (max-width: 670px) {
+  h3 {
+    font-size: 2.2rem;
+  }
+
+  #home {
+    height: 60vh;
+  }
+
+  #home h3 {
+    top: 32%;
+    left: 15%;
+    width: 70vw;
+  }
+}
+
+@media (max-width: 420px) {
+  h3 {
+    font-size: 2rem;
+  }
+
+  #home {
+    height: 40vh;
+  }
+
+  #home h3 {
+    top: 22%;
+    left: 8%;
+    width: 85vw;
+  }
+}
