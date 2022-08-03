@@ -1,3 +1,4 @@
+/********** Estilos Gerais *************/
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
 :root {
@@ -6,9 +7,28 @@
   --yellow: #fae92d;
   --white: #ffffff;
 }
+
+h2 {
+  font-size: 4.5rem;
+  color: var(--white);
+}
+
 h3 {
   font-size: 4rem;
   color: var(--white);
+}
+
+p {
+  font-size: 2rem;
+  text-align: justify;
+  font-weight: 400;
+}
+
+.undeline-title {
+  width: 30rem;
+  background-color: var(--yellow);
+  height: 3px;
+  margin: 5px 0;
 }
 
 * {
@@ -19,7 +39,6 @@ h3 {
   border: none;
   outline: none;
   box-sizing: border-box;
-  text-transform: capitalize;
 }
 
 *::selection {
@@ -38,6 +57,8 @@ html {
 body {
   scroll-behavior: smooth;
 }
+
+/********** Estilos Menu *************/
 
 header {
   position: fixed;
@@ -79,31 +100,151 @@ header #navbar a:hover {
   color: var(--yellow);
 }
 
+/********** Estilos Home *************/
+
 #home {
   background: url(../images/bg-home-header.png) no-repeat center;
   background-size: cover;
-  height: 90vh;
+  height: 70vh;
   display: relative;
 }
 
 #home h3 {
   position: absolute;
-  top: 45%;
+  top: 35%;
   left: 20%;
   text-align: center;
   width: 60vw;
   text-transform: none;
 }
 
-#sobre {
-  background-color: red;
+/********** Estilos Section Sobre *************/
+
+.container {
+  padding: 1rem 12%;
 }
 
+#sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
+}
+
+#sobre h2 {
+  color: var(--black);
+  padding-top: 1rem;
+}
+
+#sobre .sobre-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+#sobre .sobre-content img {
+  width: 30%;
+  border: 5px outset var(--yellow);
+}
+
+#sobre .sobre-content p {
+  width: 50%;
+}
+
+/********** Estilos Section Serviços *************/
+
 #servicos {
-  background-color: green;
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px 0;
+}
+
+#servicos h2 {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+#servicos .undeline-title {
+  width: 15rem;
+  justify-self: center;
+}
+
+.servicos-content {
+  padding: 3rem 12%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1500px;
+}
+
+.card-servico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  background-color: var(--white);
+  border-radius: 15px;
+  height: 350px;
+  padding: 20px;
+}
+
+.card-servico:hover {
+  background-color: var(--blue);
+  color: var(--white);
+  border: 2px solid var(--yellow);
+}
+
+.card-servico .icon-servico {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  color: var(--yellow);
+}
+
+.card-servico p {
+  text-align: center;
 }
 
 /************ Media Queries *************/
+@media (min-width: 1400px) {
+  header .logo img {
+    width: 250px;
+  }
+
+  #sobre .sobre-content img {
+    width: 25%;
+    border: 5px outset var(--yellow);
+  }
+}
+
+@media (max-width: 1270px) {
+  .servicos-content {
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 1150px) {
+  #sobre .sobre-content img {
+    width: 40%;
+    border: 5px outset var(--yellow);
+  }
+}
+@media (max-height: 1080px) {
+  #home {
+    height: 90vh;
+  }
+
+  #home h3 {
+    top: 45%;
+  }
+}
 @media (max-width: 900px) {
   h3 {
     font-size: 3rem;
@@ -150,11 +291,31 @@ header #navbar a:hover {
   #home h3 {
     top: 35%;
   }
+
+  #sobre .sobre-content img {
+    display: none;
+  }
+
+  #sobre .sobre-content p {
+    width: 100%;
+  }
 }
 
 @media (max-width: 670px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+
   h3 {
     font-size: 2.2rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  .undeline-title {
+    width: 15rem;
   }
 
   #home {
