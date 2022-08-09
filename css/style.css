@@ -194,6 +194,7 @@ header #navbar a:hover {
   border-radius: 15px;
   height: 350px;
   padding: 20px;
+  cursor: pointer;
 }
 
 .card-servico:hover {
