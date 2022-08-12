@@ -24,7 +24,7 @@ p {
   font-weight: 400;
 }
 
-.undeline-title {
+.underline-title {
   width: 30rem;
   background-color: var(--yellow);
   height: 3px;
@@ -169,7 +169,7 @@ header #navbar a:hover {
   text-align: center;
 }
 
-#servicos .undeline-title {
+#servicos .underline-title {
   width: 15rem;
   justify-self: center;
 }
@@ -194,7 +194,6 @@ header #navbar a:hover {
   border-radius: 15px;
   height: 350px;
   padding: 20px;
-  cursor: pointer;
 }
 
 .card-servico:hover {
@@ -213,7 +212,99 @@ header #navbar a:hover {
   text-align: center;
 }
 
+/************ Estilos Seção Depoimentos ************/
+#depoimentos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
+  color: var(--white);
+}
+
+#depoimentos h2 {
+  color: #000;
+}
+
+#depoimentos .underline-title {
+  width: 25rem;
+  margin-bottom: 20px;
+}
+
+.cards-dep {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  margin: 0;
+  margin-top: 50px;
+}
+
+.cards-dep .card {
+  width: 550px;
+  height: 250px;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 20px 30px;
+  position: relative;
+  background-color: var(--blue);
+  box-shadow: 10px 20px 25px rgba(0, 0, 0, 0.3);
+  transition: all linear 0.2s;
+}
+
+.cards-dep .card img {
+  width: 100px;
+  height: 100px;
+  border: 5px solid var(--white);
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  position: absolute;
+  top: -50px;
+  left: 165px;
+}
+
+.cards-dep .card p {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cards-dep .card svg {
+  color: var(--yellow);
+  font-size: 5rem;
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
+}
+
+.cards-dep .card:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.container-dep {
+  padding: 0;
+  margin: 0;
+}
+
 /************ Media Queries *************/
+@media (max-width: 1570px) {
+  .cards-dep .card img {
+    left: 100px;
+  }
+
+  .cards-dep {
+    width: 80vw;
+  }
+
+  .cards-dep .card p {
+    margin-top: 60px;
+  }
+
+  .cards-dep .card {
+    height: 300px;
+  }
+}
+
 @media (min-width: 1400px) {
   header .logo img {
     width: 250px;
@@ -222,6 +313,24 @@ header #navbar a:hover {
   #sobre .sobre-content img {
     width: 25%;
     border: 5px outset var(--yellow);
+  }
+}
+
+@media (max-width: 1295px) {
+  .cards-dep .card img {
+    left: 100px;
+  }
+
+  .cards-dep {
+    width: 90vw;
+  }
+
+  .cards-dep .card p {
+    margin-top: 75px;
+  }
+
+  .cards-dep .card {
+    height: 325px;
   }
 }
 
@@ -246,6 +355,25 @@ header #navbar a:hover {
     top: 45%;
   }
 }
+
+@media (max-width: 1080px) {
+  .cards-dep {
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .cards-dep .card p {
+    margin-top: 60px;
+  }
+
+  .cards-dep .card {
+    height: 300px;
+    margin: 50px;
+  }
+}
+
 @media (max-width: 900px) {
   h3 {
     font-size: 3rem;
@@ -302,6 +430,16 @@ header #navbar a:hover {
   }
 }
 
+@media (max-width: 800px) {
+  .cards-dep {
+    width: 85vw;
+  }
+
+  .cards-dep .card {
+    width: 80%;
+  }
+}
+
 @media (max-width: 670px) {
   h2 {
     font-size: 2.5rem;
@@ -315,7 +453,7 @@ header #navbar a:hover {
     font-size: 1.6rem;
   }
 
-  .undeline-title {
+  .underline-title {
     width: 15rem;
   }
 
@@ -327,6 +465,10 @@ header #navbar a:hover {
     top: 32%;
     left: 15%;
     width: 70vw;
+  }
+
+  .cards-dep .card p {
+    font-size: 1.8rem;
   }
 }
 
