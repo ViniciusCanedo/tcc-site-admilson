@@ -370,7 +370,7 @@ header #navbar a:hover {
 
   .cards-dep .card {
     height: 300px;
-    margin: 50px 0;
+    margin: 40px 0;
   }
 }
 
@@ -485,5 +485,17 @@ header #navbar a:hover {
     top: 22%;
     left: 8%;
     width: 85vw;
+  }
+
+  .cards-dep .card p {
+    margin-top: 70px;
+  }
+
+  .cards-dep .card {
+    height: 350px;
+  }
+
+  .cards-dep .card img {
+    left: 85px;
   }
 }
