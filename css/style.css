@@ -370,7 +370,7 @@ header #navbar a:hover {
 
   .cards-dep .card {
     height: 300px;
-    margin: 50px;
+    margin: 50px 0;
   }
 }
 
