@@ -15,7 +15,7 @@
   <body>
     <!-- Inicio Header-->
     <header>
-      <a href="index.html" class="logo">
+      <a href="login.html" class="logo">
         <img
           src="images/logo.svg"
           alt="Logo Admilson - Reformas e Construções"
@@ -37,7 +37,9 @@
     </header>
     <!-- Fim Header-->
 
+    <!-- Inicio Conteudo -->
     <main>
+      <a href="https://api.whatsapp.com/send?phone=5515981401401" target="_blank"><img src="images/whatsapp-icon.svg" alt="Botão para whatsapp" class="whats-button"></a>
       <!-- Inicio Home -->
       <section id="home">
         <h3>Buscando sempre conforto e seguranca pra você.</h3>
@@ -120,6 +122,7 @@
       </section>
       <!-- Fim Serviços -->
 
+      <!-- Inicio Depoimentos-->
       <div class="container container-dep">
         <section id="depoimentos">
           <h2>Depoimentos</h2>
@@ -157,9 +160,34 @@
             </div>
           </div>
         </section>
-        <section id="contato">contato</section>
       </div>
+      <!-- Fim Depoimentos-->
+
+      <!-- Início Contato -->
+      <section id="contato">
+        <h2>Contato</h2>
+        <div class="underline-title"></div>
+        <p>Envie uma mensagem para obter mais informações, solicitar um orçamento e agendar uma reunião.</p>
+        <form action="enviaMensagem.php" method="post">
+          <input type="text" name="nome" id="input-nome" class="input-form" placeholder="Nome *" required>
+          <input type="text" name="celular" id="input-celular" class="input-form" placeholder="Celular *" required>
+          <div class="custom-checkbox">
+            <input type="checkbox" name="whatsapp" id="input-whats">
+            <label for="input-whats" id="input-whats-texto"> Deseja ser contatado via Whatsapp?</label>
+          </div>
+          <input type="text" name="mensagem" id="input-mensagem" class="input-form" placeholder="Mensagem *" required>
+          <input type="submit" value="Enviar" id="btn-submit">
+        </form>
+        <span>* - Campos obrigatórios</span>
+      </section>
+      <!-- Início Contato -->
     </main>
+    <!-- fim Conteudo -->
+
+    <footer>
+      <p>&copy; Copyright 2022 - Admilson | Reformas e Construções. Desenvolvido por Web Company.</p>
+    </footer>
+    
     <!-- Arquivos JavaScript -->
     <script src="js/all.min.js"></script>
     <script src="js/swiper.min.js"></script>

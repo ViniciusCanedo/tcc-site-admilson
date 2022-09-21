@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admilson | Reformas e Construções</title>
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+    <!-- Folhas de Estilos -->
+    <link rel="stylesheet" href="css/style-login.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+  </head>
+
+  <body>
+    <div class="container-login">
+      <div class="login-form">
+        <div class="title">Login</div>
+        <form
+          action="admin-login.php"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="input-box">
+            <i class="fa-solid fa-user"></i>
+            <input
+              type="text"
+              name="user-admin"
+              id="user-admin"
+              placeholder="Usuário"
+              required
+            />
+          </div>
+
+          <div class="input-box">
+            <i class="fa-solid fa-lock"></i>
+            <input
+              type="password"
+              name="pass-admin"
+              id="pass-admin"
+              placeholder="Senha"
+              required
+            />
+            <div id="icon" onclick="showHide()"></div>
+          </div>
+
+          <div class="forgot"><a href="#">Esqueceu a senha?</a></div>
+
+          <div class="input-box">
+            <input type="submit" value="Entrar" />
+          </div>
+        </form>
+      </div>
+      <!-- Fim Login Form -->
+
+      <!-- Img Login-->
+      <div class="img-login">
+        <img
+          src="images/img-login.svg"
+          alt="Desenho de engenheiro supervisionando o projeto"
+          width="100%"
+        />
+      </div>
+      <!-- Fim Img Login-->
+    </div>
+    <!-- Arquivos JavaScript -->
+    <script src="js/all.min.js"></script>
+    <script src="js/passwordShow.js"></script>
+  </body>
+</html>
