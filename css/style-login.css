@@ -126,6 +126,7 @@ body {
   cursor: pointer;
   background-size: cover;
   right: 15px;
+  transition: all ease 200ms;
 }
 
 #icon.hide {
