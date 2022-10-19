@@ -43,6 +43,10 @@ body {
   border-radius: 15px;
 }
 
+.img-login {
+  width: 22vw;
+}
+
 .container-login .login-form .title {
   position: relative;
   font-size: 24px;
@@ -134,7 +138,7 @@ body {
   background-size: cover;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .container-login .img-login {
     display: none;
   }
