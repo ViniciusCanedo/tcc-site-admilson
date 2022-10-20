@@ -73,7 +73,8 @@ body {
   position: relative;
 }
 
-.container-login .login-form .input-box input {
+.container-login .login-form .input-box input,
+.container-login .login-form .input-box #btn-login{
   height: 100%;
   width: 100%;
   outline: none;
