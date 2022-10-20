@@ -98,6 +98,8 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: all ease 0.3s;
+  text-align: center;
+  line-height: 50px;
 }
 
 #btn-login:hover{
